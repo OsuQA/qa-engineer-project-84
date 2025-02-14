@@ -6,6 +6,7 @@
   steps-to-reproduce: |
     1. Зайти на сайт https://hexlet-products-store.vercel.app/
     2. Нажать на кнопку "Язык"
+    3. Выбрать English
   expected-result: |
     На странице выбора английского языка отобразится флажок (лого)
   actual-result: |
