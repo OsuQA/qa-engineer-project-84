@@ -1,0 +1,142 @@
+---
+test-cases:
+  - summary: |
+      Проверка чекбокса "В наличии" или "In Stock"
+    status: fail
+
+  - summary: |
+      Проверка кнопок "Следующая" или "Next" и "Previous" или "Предыдущая"
+    status: pass
+
+  - summary: |
+      Проверка мультиязычности
+    status: pass
+
+  - summary: |
+      Проверка фильтрации товаров
+    status: pass
+
+  - summary: |
+      Авторизация пользователя
+    status: pass
+
+  - summary: |
+      Проверка перехода на страницу товара
+    status: pass
+
+  - summary: |
+      Проверка добавления товара в корзину
+    status: pass
+
+  - summary: |
+      Проверка отображения корзины
+    status: pass
+
+  - summary: |
+      Проверка оформления заказа
+    status: pass
+
+  - summary: |
+      Проверка удаления товара из корзины
+    status: pass
+
+bugreports:
+  - summary: |
+      Не отображается флажок Англии при выборе языка "English"
+    environment: |
+      Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать на кнопку "Язык"
+      3. Выбрать English
+    expected-result: |
+      Вместо лого отображен "ошибочный" элемент
+    actual-result: |
+      Логотип (флажок) был полностью убран
+
+  - summary: |
+      Нарушена верстка страницы товаров
+    environment: |
+      Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Прокрутить страницу вниз
+    expected-result: |
+      Элементы отображены без смещений и наложений
+    actual-result: |
+      Элементы отображаются исправно, текст не смещен
+
+  - summary: |
+      Нарушена адаптивность в мобильной версии сайта
+    environment: |
+      Galaxy A51, Android 13, Google Chrome
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Прокрутить страницу вниз
+    expected-result: |
+      Кнопка "Оформить заказ" отображаются корректно и текст не обрезан
+    actual-result: |
+      Текст обрезан, не адаптирован
+
+  - summary: |
+      Лишнее отображение страницы с товаром при выборе категорий
+    environment: |
+      Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Выбрать категории по очереди
+      3. Нажать на кнопку "Следующая"
+    expected-result: |
+      Нет пустой страницы и кнопка "Следующая" недоступна для нажатия, отображается последняя страница со списком товаров
+    actual-result: |
+      Отображается последняя страница со списком товаров, нет пустой страницы
+
+  - summary: |
+      Нет названия производителя
+    environment: |
+      Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Выбрать чекбокс производителя без названия
+    expected-result: |
+      У производителя есть название и оно отображается
+    actual-result: |
+      В фильтре "Произоводитель" последний чекбокс отображается без названия
+
+  - summary: |
+      Ошибка запроса при оформлении заказа
+    environment: |
+      Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Перейти в корзину
+      3. Нажать "Оформить заказ"
+    expected-result: |
+      Запрос на оформление успешно отправлен
+    actual-result: |
+      Ошибка в запросе, заказ не оформляется
+
+  - summary: |
+      Нет выбора количества товара в одной позиции
+    environment: |
+      Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Выбрать любой товр
+      3. Нажать кнопку "В корзину"
+    expected-result: |
+      При добавлении товара в корзину есть возможность выбрать количество
+    actual-result: |
+      Нельзя выбрать количество товаров одной позиции
+
+   - summary: |
+      При обновлении страницы язык сайта сбрасывается на English
+    environment: |
+      Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+    steps-to-reproduce: |
+      1. Зайти на сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Обновить страницу
+    expected-result: |
+      При обновлении страницы выбранный русский язык сайта не сбрасывается
+    actual-result: |
+      Выбрав русский язык, он сбрасывается на английский, если обновить страницу
