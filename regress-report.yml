@@ -17,10 +17,6 @@ test-cases:
     status: pass
 
   - summary: |
-      Авторизация пользователя
-    status: pass
-
-  - summary: |
       Проверка перехода на страницу товара
     status: pass
 
