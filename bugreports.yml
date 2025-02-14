@@ -1,0 +1,26 @@
+---
+- summary: |
+    Не отображается флажок Англии при выборе языка "English"
+  environment: |
+    Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+  steps-to-reproduce: |
+    1. Зайти на сайт https://hexlet-products-store.vercel.app/
+    2. Нажать на кнопку "Язык"
+  expected-result: |
+    На странице выбора английского языка отобразится флажок (лого)
+  actual-result: |
+    Вместо лого отображен "ошибочный" элемент
+    Скриншот бага - English.png
+
+- summary: |
+    Нарушена верстка страницы товаров
+  environment: |
+    Google Chrome 133.0.6943.99 (Официальная сборка), (64 бит)
+  steps-to-reproduce: |
+    1. Зайти на страницу каталога товаров https://hexlet-products-store.vercel.app/
+    2. Прокрутить страницу вниз
+  expected-result: |
+    Элементы отображены корректно, нет смещений и наложений
+  actual-result: |
+    Элементы наложены и смещен текст
+    Скриншот бага - Verstka.png
