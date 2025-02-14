@@ -4,9 +4,9 @@
   requirement: |
     При нажатии/отжатии кнопки должно поменяться отображение товаров
   prerequisites: |
-    no data
+    empty
   test-data: |
-    no data
+    empty
   steps:
     - Нажать кнопку
     - Отжать кнопку
@@ -18,9 +18,9 @@
   requirement: |
     При нажатии кнопок открывается страница с новыми и старыми товарами
   prerequisites: |
-    no data
+    empty
   test-data: |
-    no data
+    empty
   steps:
     - Нажать кнопки
   expected-result: |
@@ -31,9 +31,9 @@
   requirement: |
     При выборе языка интерфейс сайта подстраивается под выбранный язык
   prerequisites: |
-    no data
+    empty
   test-data: |
-    no data
+    empty
   steps:
     - Нажать кнопку "Language" или "Язык"
     - Выбрать из списка Русский или English
@@ -47,7 +47,7 @@
   prerequisites: |
     Чекбокс "В наличии" в активном состоянии
   test-data: |
-    no data
+    empty
   steps:
     - Выбрать нужную категорию
   expected-result: |
@@ -60,7 +60,7 @@
   prerequisites: |
     Сайт открыт
   test-data: |
-    no data
+    empty
   steps:
     - На главной странице выбрать любой товар
   expected-result: |
@@ -73,7 +73,7 @@
   prerequisites: |
     Открыта страница товара
   test-data: |
-    no data
+    empty
   steps:
     - Нажать кнопку "В корзину"
   expected-result: |
@@ -86,7 +86,7 @@
   prerequisites: |
     Товары добавлены в корзину
   test-data: |
-    no data
+    empty
   steps:
     - Перейти в корзину
   expected-result: |
@@ -99,7 +99,7 @@
   prerequisites: |
     Корзина содержит товары
   test-data: |
-    no data
+    empty
   steps:
     - Перейти к оформлению заказа
     - Заполнить все необходимые поля
@@ -114,7 +114,7 @@
   prerequisites: |
     Товар добавлен в корзину
   test-data: |
-    no data
+    empty
   steps:
     - Перейти в корзину
     - Нажать на кнопку "Удалить" рядом с товаром
