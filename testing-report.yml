@@ -16,7 +16,7 @@
   status: pass
 
 - summary: |
-    Авторизация пользователя
+    Успешная авторизация пользователя
   status: fail
 
 - summary: |
